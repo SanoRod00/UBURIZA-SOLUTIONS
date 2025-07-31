@@ -374,3 +374,24 @@ footer {
     }
   }
 }
+
+/* Background color utility classes */
+.bg-white {
+  background-color: $white;
+  color: $dark; /* dark text on white background */
+}
+
+.bg-dark {
+  background-color: $dark;
+  color: $white; /* white text on dark background */
+}
+
+.bg-indigo {
+  background-color: $indigo;
+  color: $white; /* white text on indigo background */
+}
+
+.bg-green {
+  background-color: $green;
+  color: $dark; /* dark text on green background */
+}

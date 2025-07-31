@@ -1,0 +1,95 @@
+.modalOverlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 50, 0.8); // dark blue with opacity
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 2px 10px rgba(0, 0, 50, 0.5);
+  color: #003366; // dark blue text
+  font-family: Arial, sans-serif;
+
+  h2 {
+    margin-bottom: 1rem;
+    color: #004d00; // dark green
+    font-weight: 700;
+    text-align: center;
+  }
+
+  form label {
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: #003366; // dark blue
+  }
+
+  input[type="text"],
+  input[type="email"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    border: 1px solid #004d00; // dark green border
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #003366; // dark blue text
+    background-color: #f0f8f0; // very light green background
+    transition: border-color 0.3s ease;
+  }
+
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  select:focus,
+  textarea:focus {
+    border-color: #007700; // brighter green on focus
+    outline: none;
+    background-color: #e6ffe6; // lighter green on focus
+  }
+
+  .modalButtons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .buttonPrimary {
+    background-color: #007700; // green
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+
+  .buttonPrimary:hover {
+    background-color: #004d00; // dark green
+  }
+
+  .buttonSecondary {
+    background-color: #e0e0e0;
+    color: #333;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+
+  .buttonSecondary:hover {
+    background-color: #c7c7c7;
+  }
+}

@@ -17,7 +17,7 @@ const Hero = () => {
 
           <div className='sub-heading'>
             <TitleSm title='WEBSITES' /> <span>.</span>
-            <TitleSm title='BRANDING' /> <span>.</span>
+            <TitleSm title=' PROFESSIONAL  ' /> <span>.</span>
             <TitleSm title='DIGITAL MARKETING' />
           </div>
         </div>
@@ -25,8 +25,9 @@ const Hero = () => {
       <section className='hero-sec'>
         <div className='container'>
           <div className='heading-title'>
-            <Title title='The last digital agency you ll ever need' />
-            <p>Suspendisse ut magna porttitor, sollicitudin ligula at, molestie dolor. Vivamus a ligula ut velit placerat egestas at id leo. Nulla ac volutpat nunc. Nulla facilisi. Pellentesque tempus tellusut magna porttitor scelerisque.</p>
+            <Title title="The last digital agency you'll ever need" />
+            <p> Uburiza Solutions is a professional business support agency based in Rwanda. We help businesses and individuals grow through digital marketing, training, project support, branding, relocation assistance, and event management. Whether you're an entrepreneur, company, NGO, or newcomer to Rwanda, our solutions are designed to create real, lasting impact.
+            </p>
           </div>
           <div className='hero-content grid-4'>
             {home.map((item, i) => (

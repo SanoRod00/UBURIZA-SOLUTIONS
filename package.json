@@ -15,6 +15,7 @@
     "react-icons": "^4.8.0",
     "react-slick": "^0.29.0",
     "sass": "^1.61.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "sudo": "^1.0.3"
   }
 }
