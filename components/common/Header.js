@@ -4,15 +4,34 @@ import { useRouter } from "next/router"
 import { useEffect, useState } from "react"
 import { RiMenu4Line } from "react-icons/ri"
 import { AiOutlineClose } from "react-icons/ai"
+import ConsultationSurvey from "./ConsultationSurvey";
 
 const Header = () => {
   const [activeLink, setActiveLink] = useState("")
   const [open, setOpen] = useState(false)
+  const [showSurvey, setShowSurvey] = useState(false);
 
   const router = useRouter()
   useEffect(() => {
     setActiveLink(router.pathname)
   }, [router.pathname])
+
+  const handleOpenSurvey = () => {
+    setShowSurvey(true);
+  };
+
+  const handleCloseSurvey = () => {
+    setShowSurvey(false);
+  };
+
+  const handleSubmitSurvey = (formData) => {
+    // For now, simulate sending data by logging and closing modal
+    console.log("Consultation form submitted:", formData);
+    alert("Thank you for booking a consultation. We will contact you soon.");
+    setShowSurvey(false);
+    // Optionally, redirect to contact page or send data to API here
+  };
+
   return (
     <>
       <header>
@@ -44,11 +63,16 @@ const Header = () => {
             <Link href='/contact' className={activeLink == "/contact" ? "activeLink" : "none"}>
               Contact
             </Link>
-            <button className='button-primary'>book a consultation</button>
+            <button className='button-primary' onClick={handleOpenSurvey}>book a consultation</button>
           </nav>
           <button onClick={() => setOpen(!open)}>{open ? <AiOutlineClose size={25} /> : <RiMenu4Line size={25} />}</button>
         </div>
       </header>
+      <ConsultationSurvey
+        isOpen={showSurvey}
+        onClose={handleCloseSurvey}
+        onSubmit={handleSubmitSurvey}
+      />
     </>
   )
 }
